@@ -1,0 +1,417 @@
+@prefix  owl: <http://www.w3.org/2002/07/owl#> .
+@prefix  xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix  rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix  fam: <http://example.org/family#> .
+
+# Named toplevel resources (66)
+
+fam:Adoption
+  a owl:Class .
+
+fam:Divorce
+  a owl:Class .
+
+fam:Female
+  a owl:Class .
+
+fam:Male
+  a owl:Class .
+
+fam:Marriage
+  a owl:Class .
+
+fam:Person
+  a owl:Class .
+
+fam:adopt_faktorovich_georgiy_faktorovich_ilya_lyutikova_elena_2007
+  a fam:Adoption ;
+  fam:adoptedPerson fam:faktorovich_georgiy ;
+  fam:adoptiveParent fam:faktorovich_ilya ,
+		     fam:lyutikova_elena ;
+  fam:eventYear 2007 .
+
+fam:adoptedPerson
+  a owl:ObjectProperty .
+
+fam:adoptiveParent
+  a owl:ObjectProperty .
+
+fam:arhipova_lyubov
+  a fam:Female ,
+    fam:Person ;
+  fam:birthYear 1967 ;
+  fam:spouseOf fam:kirilin_valeriy .
+
+fam:arhipova_natalya
+  a fam:Female ,
+    fam:Person ;
+  fam:birthYear 1964 .
+
+fam:bioFather
+  a owl:ObjectProperty ;
+  rdfs:subPropertyOf fam:hasFather .
+
+fam:bioMother
+  a owl:ObjectProperty ;
+  rdfs:subPropertyOf fam:hasMother .
+
+fam:birthYear
+  a owl:DatatypeProperty .
+
+fam:deathYear
+  a owl:DatatypeProperty .
+
+fam:div_sadovaya_marina_lyutikov_vladimir_2016
+  a fam:Divorce ;
+  fam:divorcedPerson fam:lyutikov_vladimir ,
+		     fam:sadovaya_marina ;
+  fam:eventYear 2016 .
+
+fam:div_sadovoy_dmitriy_ubuntu_svetlana_2009
+  a fam:Divorce ;
+  fam:divorcedPerson fam:sadovoy_dmitriy ,
+		     fam:ubuntu_svetlana ;
+  fam:eventYear 2009 .
+
+fam:divorcedPerson
+  a owl:ObjectProperty .
+
+fam:eventYear
+  a owl:DatatypeProperty .
+
+fam:faktorovich_aleksandra
+  a fam:Female ,
+    fam:Person ;
+  fam:bioFather fam:faktorovich_ilya ;
+  fam:bioMother fam:lyutikova_elena ;
+  fam:birthYear 2004 ;
+  fam:hasFather fam:faktorovich_ilya ;
+  fam:hasMother fam:lyutikova_elena ;
+  fam:hasParent fam:faktorovich_ilya ,
+		fam:lyutikova_elena .
+
+fam:faktorovich_georgiy
+  a fam:Male ,
+    fam:Person ;
+  fam:adoptiveParent fam:faktorovich_ilya ,
+		     fam:lyutikova_elena ;
+  fam:birthYear 2007 ;
+  fam:hasParent fam:faktorovich_ilya ,
+		fam:lyutikova_elena .
+
+fam:faktorovich_ilya
+  a fam:Male ,
+    fam:Person ;
+  fam:birthYear 1985 .
+
+fam:gandzhubas_olga
+  a fam:Female ,
+    fam:Person ;
+  fam:birthYear 1961 .
+
+fam:hasChild
+  a owl:ObjectProperty ;
+  owl:inverseOf fam:hasParent .
+
+fam:hasFather
+  a owl:ObjectProperty ;
+  rdfs:subPropertyOf fam:hasParent .
+
+fam:hasMother
+  a owl:ObjectProperty ;
+  rdfs:subPropertyOf fam:hasParent .
+
+fam:hasParent
+  a owl:ObjectProperty .
+
+fam:kirilin_valeriy
+  a fam:Male ,
+    fam:Person ;
+  fam:birthYear 1962 ;
+  fam:deathYear 2024 .
+
+fam:kirilin_vasiliy
+  a fam:Male ,
+    fam:Person ;
+  fam:birthYear 1989 .
+
+fam:kirilina_lyubov
+  a fam:Female ,
+    fam:Person ;
+  fam:birthYear 1982 .
+
+fam:lyutikov_vladimir
+  a fam:Male ,
+    fam:Person ;
+  fam:birthYear 1974 ;
+  fam:deathYear 2017 .
+
+fam:lyutikova_elena
+  a fam:Female ,
+    fam:Person ;
+  fam:birthYear 1984 ;
+  fam:spouseOf fam:faktorovich_ilya .
+
+fam:mak_iona
+  a fam:Female ,
+    fam:Person ;
+  fam:birthYear 1964 ;
+  fam:deathYear 1994 .
+
+fam:mar_arhipova_lyubov_kirilin_valeriy_1980
+  a fam:Marriage ;
+  fam:eventYear 1980 ;
+  fam:marriedPerson fam:arhipova_lyubov ,
+		    fam:kirilin_valeriy .
+
+fam:mar_lyutikova_elena_faktorovich_ilya_2003
+  a fam:Marriage ;
+  fam:eventYear 2003 ;
+  fam:marriedPerson fam:faktorovich_ilya ,
+		    fam:lyutikova_elena .
+
+fam:mar_sadovaya_marina_lyutikov_vladimir_2015
+  a fam:Marriage ;
+  fam:eventYear 2015 ;
+  fam:marriedPerson fam:lyutikov_vladimir ,
+		    fam:sadovaya_marina .
+
+fam:mar_sadovoy_aleksandr_ml_gandzhubas_olga_1976
+  a fam:Marriage ;
+  fam:eventYear 1976 ;
+  fam:marriedPerson fam:gandzhubas_olga ,
+		    fam:sadovoy_aleksandr_ml .
+
+fam:mar_sadovoy_aleksandr_st_sinitsina_margarita_1948
+  a fam:Marriage ;
+  fam:eventYear 1948 ;
+  fam:marriedPerson fam:sadovoy_aleksandr_st ,
+		    fam:sinitsina_margarita .
+
+fam:mar_sadovoy_andrey_shkafchik_agnes_2002
+  a fam:Marriage ;
+  fam:eventYear 2002 ;
+  fam:marriedPerson fam:sadovoy_andrey ,
+		    fam:shkafchik_agnes .
+
+fam:mar_sadovoy_arkadiy_mak_iona_1975
+  a fam:Marriage ;
+  fam:eventYear 1975 ;
+  fam:marriedPerson fam:mak_iona ,
+		    fam:sadovoy_arkadiy .
+
+fam:mar_sadovoy_dmitriy_ubuntu_svetlana_2001
+  a fam:Marriage ;
+  fam:eventYear 2001 ;
+  fam:marriedPerson fam:sadovoy_dmitriy ,
+		    fam:ubuntu_svetlana .
+
+fam:mar_sadovoy_valeriy_arhipova_natalya_1978
+  a fam:Marriage ;
+  fam:eventYear 1978 ;
+  fam:marriedPerson fam:arhipova_natalya ,
+		    fam:sadovoy_valeriy .
+
+fam:mar_vazovskiy_mike_sadovoy_ivan_2025
+  a fam:Marriage ;
+  fam:eventYear 2025 ;
+  fam:marriedPerson fam:sadovoy_ivan ,
+		    fam:vazovskiy_mike .
+
+fam:marriedPerson
+  a owl:ObjectProperty .
+
+fam:redis_yablokovich
+  a fam:Male ,
+    fam:Person ;
+  fam:birthYear 1973 .
+
+fam:sadovaya_anna
+  a fam:Female ,
+    fam:Person ;
+  fam:bioFather fam:sadovoy_dmitriy ;
+  fam:bioMother fam:ubuntu_svetlana ;
+  fam:birthYear 2008 ;
+  fam:hasFather fam:sadovoy_dmitriy ;
+  fam:hasMother fam:ubuntu_svetlana ;
+  fam:hasParent fam:sadovoy_dmitriy ,
+		fam:ubuntu_svetlana .
+
+fam:sadovaya_irina
+  a fam:Female ,
+    fam:Person ;
+  fam:bioFather fam:sadovoy_valeriy ;
+  fam:bioMother fam:arhipova_natalya ;
+  fam:birthYear 1980 ;
+  fam:hasFather fam:sadovoy_valeriy ;
+  fam:hasMother fam:arhipova_natalya ;
+  fam:hasParent fam:arhipova_natalya ,
+		fam:sadovoy_valeriy .
+
+fam:sadovaya_margarita
+  a fam:Female ,
+    fam:Person ;
+  fam:bioFather fam:sadovoy_aleksandr_ml ;
+  fam:bioMother fam:gandzhubas_olga ;
+  fam:birthYear 1980 ;
+  fam:hasFather fam:sadovoy_aleksandr_ml ;
+  fam:hasMother fam:gandzhubas_olga ;
+  fam:hasParent fam:gandzhubas_olga ,
+		fam:sadovoy_aleksandr_ml .
+
+fam:sadovaya_marina
+  a fam:Female ,
+    fam:Person ;
+  fam:bioFather fam:sadovoy_valeriy ;
+  fam:bioMother fam:arhipova_natalya ;
+  fam:birthYear 1985 ;
+  fam:hasFather fam:sadovoy_valeriy ;
+  fam:hasMother fam:arhipova_natalya ;
+  fam:hasParent fam:arhipova_natalya ,
+		fam:sadovoy_valeriy ;
+  fam:spouseOf fam:lyutikov_vladimir .
+
+fam:sadovaya_natalya
+  a fam:Female ,
+    fam:Person ;
+  fam:bioFather fam:sadovoy_dmitriy ;
+  fam:bioMother fam:ubuntu_svetlana ;
+  fam:birthYear 2005 ;
+  fam:hasFather fam:sadovoy_dmitriy ;
+  fam:hasMother fam:ubuntu_svetlana ;
+  fam:hasParent fam:sadovoy_dmitriy ,
+		fam:ubuntu_svetlana .
+
+fam:sadovaya_olga
+  a fam:Female ,
+    fam:Person ;
+  fam:bioFather fam:sadovoy_dmitriy ;
+  fam:bioMother fam:ubuntu_svetlana ;
+  fam:birthYear 2002 ;
+  fam:hasFather fam:sadovoy_dmitriy ;
+  fam:hasMother fam:ubuntu_svetlana ;
+  fam:hasParent fam:sadovoy_dmitriy ,
+		fam:ubuntu_svetlana .
+
+fam:sadovoy_aleksandr_ml
+  a fam:Male ,
+    fam:Person ;
+  fam:bioFather fam:sadovoy_aleksandr_st ;
+  fam:bioMother fam:sinitsina_margarita ;
+  fam:birthYear 1955 ;
+  fam:deathYear 2025 ;
+  fam:hasFather fam:sadovoy_aleksandr_st ;
+  fam:hasMother fam:sinitsina_margarita ;
+  fam:hasParent fam:sadovoy_aleksandr_st ,
+		fam:sinitsina_margarita ;
+  fam:spouseOf fam:gandzhubas_olga .
+
+fam:sadovoy_aleksandr_st
+  a fam:Male ,
+    fam:Person ;
+  fam:birthYear 1936 ;
+  fam:deathYear 1999 ;
+  fam:spouseOf fam:sinitsina_margarita .
+
+fam:sadovoy_andrey
+  a fam:Male ,
+    fam:Person ;
+  fam:bioFather fam:sadovoy_arkadiy ;
+  fam:bioMother fam:mak_iona ;
+  fam:birthYear 1989 ;
+  fam:hasFather fam:sadovoy_arkadiy ;
+  fam:hasMother fam:mak_iona ;
+  fam:hasParent fam:mak_iona ,
+		fam:sadovoy_arkadiy ;
+  fam:spouseOf fam:shkafchik_agnes .
+
+fam:sadovoy_arkadiy
+  a fam:Male ,
+    fam:Person ;
+  fam:birthYear 1965 ;
+  fam:deathYear 1999 ;
+  fam:spouseOf fam:mak_iona .
+
+fam:sadovoy_dmitriy
+  a fam:Male ,
+    fam:Person ;
+  fam:bioFather fam:sadovoy_aleksandr_ml ;
+  fam:bioMother fam:gandzhubas_olga ;
+  fam:birthYear 1979 ;
+  fam:hasFather fam:sadovoy_aleksandr_ml ;
+  fam:hasMother fam:gandzhubas_olga ;
+  fam:hasParent fam:gandzhubas_olga ,
+		fam:sadovoy_aleksandr_ml ;
+  fam:spouseOf fam:ubuntu_svetlana .
+
+fam:sadovoy_grigoriy
+  a fam:Male ,
+    fam:Person ;
+  fam:bioFather fam:lyutikov_vladimir ;
+  fam:bioMother fam:sadovaya_marina ;
+  fam:birthYear 2004 ;
+  fam:hasFather fam:lyutikov_vladimir ;
+  fam:hasMother fam:sadovaya_marina ;
+  fam:hasParent fam:lyutikov_vladimir ,
+		fam:sadovaya_marina .
+
+fam:sadovoy_ivan
+  a fam:Male ,
+    fam:Person ;
+  fam:birthYear 2004 .
+
+fam:sadovoy_nikita
+  a fam:Male ,
+    fam:Person ;
+  fam:bioFather fam:redis_yablokovich ;
+  fam:bioMother fam:sadovaya_margarita ;
+  fam:birthYear 2002 ;
+  fam:hasFather fam:redis_yablokovich ;
+  fam:hasMother fam:sadovaya_margarita ;
+  fam:hasParent fam:redis_yablokovich ,
+		fam:sadovaya_margarita .
+
+fam:sadovoy_vadim
+  a fam:Male ,
+    fam:Person ;
+  fam:birthYear 2007 .
+
+fam:sadovoy_valeriy
+  a fam:Male ,
+    fam:Person ;
+  fam:bioFather fam:sadovoy_aleksandr_st ;
+  fam:bioMother fam:sinitsina_margarita ;
+  fam:birthYear 1963 ;
+  fam:hasFather fam:sadovoy_aleksandr_st ;
+  fam:hasMother fam:sinitsina_margarita ;
+  fam:hasParent fam:sadovoy_aleksandr_st ,
+		fam:sinitsina_margarita ;
+  fam:spouseOf fam:arhipova_natalya .
+
+fam:shkafchik_agnes
+  a fam:Female ,
+    fam:Person ;
+  fam:birthYear 1993 .
+
+fam:sinitsina_margarita
+  a fam:Female ,
+    fam:Person ;
+  fam:birthYear 1932 ;
+  fam:deathYear 2007 .
+
+fam:spouseOf
+  a owl:IrreflexiveProperty ,
+    owl:ObjectProperty ,
+    owl:SymmetricProperty .
+
+fam:ubuntu_svetlana
+  a fam:Female ,
+    fam:Person ;
+  fam:birthYear 1984 .
+
+fam:vazovskiy_mike
+  a fam:Male ,
+    fam:Person ;
+  fam:birthYear 1999 ;
+  fam:spouseOf fam:sadovoy_ivan .

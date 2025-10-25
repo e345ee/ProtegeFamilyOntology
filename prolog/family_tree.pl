@@ -4,7 +4,6 @@
 :- discontiguous married/3.
 :- discontiguous divorced/3.
 
-/* ======================= PEOPLE ======================= */
 % Первое колено
 person(sadovoy_grigoriy, male).
 person(faktorovich_aleksandra, female).
