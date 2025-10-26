@@ -170,7 +170,7 @@ export_family_ontology(File) :-
   % 6) сохранить
   rdf_save_turtle(File, [indent(2)]).
 
-% Шорткат
+
 export_ttl :-
-  export_family_ontology('family.ttl'),
-  format('✔ Сохранено в family.ttl~n').
+  export_family_ontology('../protege/family.ttl'),
+  format('Сохранено в family.ttl~n').

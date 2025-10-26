@@ -329,8 +329,14 @@ fam:sadovoy_andrey
 fam:sadovoy_arkadiy
   a fam:Male ,
     fam:Person ;
+  fam:bioFather fam:sadovoy_aleksandr_st ;
+  fam:bioMother fam:sinitsina_margarita ;
   fam:birthYear 1965 ;
   fam:deathYear 1999 ;
+  fam:hasFather fam:sadovoy_aleksandr_st ;
+  fam:hasMother fam:sinitsina_margarita ;
+  fam:hasParent fam:sadovoy_aleksandr_st ,
+		fam:sinitsina_margarita ;
   fam:spouseOf fam:mak_iona .
 
 fam:sadovoy_dmitriy
@@ -359,7 +365,13 @@ fam:sadovoy_grigoriy
 fam:sadovoy_ivan
   a fam:Male ,
     fam:Person ;
-  fam:birthYear 2004 .
+  fam:bioFather fam:sadovoy_andrey ;
+  fam:bioMother fam:shkafchik_agnes ;
+  fam:birthYear 2004 ;
+  fam:hasFather fam:sadovoy_andrey ;
+  fam:hasMother fam:shkafchik_agnes ;
+  fam:hasParent fam:sadovoy_andrey ,
+		fam:shkafchik_agnes .
 
 fam:sadovoy_nikita
   a fam:Male ,
@@ -375,7 +387,13 @@ fam:sadovoy_nikita
 fam:sadovoy_vadim
   a fam:Male ,
     fam:Person ;
-  fam:birthYear 2007 .
+  fam:bioFather fam:sadovoy_andrey ;
+  fam:bioMother fam:shkafchik_agnes ;
+  fam:birthYear 2007 ;
+  fam:hasFather fam:sadovoy_andrey ;
+  fam:hasMother fam:shkafchik_agnes ;
+  fam:hasParent fam:sadovoy_andrey ,
+		fam:shkafchik_agnes .
 
 fam:sadovoy_valeriy
   a fam:Male ,

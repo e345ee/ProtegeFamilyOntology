@@ -110,14 +110,19 @@ divorced(sadovoy_dmitriy, ubuntu_svetlana, 2009).
 
 married(vazovskiy_mike, sadovoy_ivan, 2025).
 
-/* ======================= ADOPTION / CHILDREN ======================= */
+
 adopted_by(faktorovich_georgiy, faktorovich_ilya, lyutikova_elena, 2007).
 
 biological_child_of(sadovoy_aleksandr_ml, sadovoy_aleksandr_st, sinitsina_margarita).
 biological_child_of(sadovoy_valeriy,      sadovoy_aleksandr_st, sinitsina_margarita).
 
+biological_child_of(sadovoy_arkadiy, sadovoy_aleksandr_st, sinitsina_margarita).
+
 biological_child_of(sadovaya_irina,  sadovoy_valeriy, arhipova_natalya).
 biological_child_of(sadovaya_marina, sadovoy_valeriy, arhipova_natalya).
+
+biological_child_of(sadovoy_ivan,  sadovoy_andrey, shkafchik_agnes).
+biological_child_of(sadovoy_vadim, sadovoy_andrey, shkafchik_agnes).
 
 biological_child_of(sadovoy_dmitriy,   sadovoy_aleksandr_ml, gandzhubas_olga).
 biological_child_of(sadovaya_margarita, sadovoy_aleksandr_ml, gandzhubas_olga).
@@ -134,7 +139,7 @@ biological_child_of(faktorovich_aleksandra, faktorovich_ilya, lyutikova_elena).
 
 biological_child_of(sadovoy_nikita, redis_yablokovich, sadovaya_margarita).
 
-/* ======================= RULES (как у тебя были) ======================= */
+
 male(P)   :- person(P, male).
 female(P) :- person(P, female).
 
